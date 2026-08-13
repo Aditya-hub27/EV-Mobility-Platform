@@ -17,10 +17,11 @@ app.use(express.json());
 // ===============================
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "aditya_270905",
-  database: "ev_mobility",
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQL_DATABASE,
+  port: Number(process.env.MYSQLPORT),
 });
 
 // ===============================
