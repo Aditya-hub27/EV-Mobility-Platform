@@ -23,7 +23,7 @@ function App() {
       setStationError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/charging-stations"
+       "https://ev-mobility-platform-production.up.railway.app/api/charging-stations"
       );
 
       if (!response.ok) {
